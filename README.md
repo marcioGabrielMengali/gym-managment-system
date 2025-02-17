@@ -54,4 +54,6 @@ A project designed to assist in managing a gym by allowing registration and moni
 
 - The project will be developed using Node.js.
 
+- The project will use fastify framework, zod for validation
+
 - The gym should be authenticated using a JWT token.
