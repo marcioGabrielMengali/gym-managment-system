@@ -4,7 +4,10 @@
   "description": "## Description",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src --out-dir build",
+    "start": "node build/server.js",
+    "lint": "npx eslint"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,18 @@
   },
   "homepage": "https://github.com/marcioGabrielMengali/gym-managment-system#readme",
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "typescript": "^5.7.3"
+    "@eslint/js": "9.20.0",
+    "@types/node": "22.13.4",
+    "eslint": "9.20.1",
+    "globals": "15.15.0",
+    "tsup": "8.3.6",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.24.1"
+  },
+  "dependencies": {
+    "dotenv": "16.4.7",
+    "fastify": "5.2.1",
+    "zod": "3.24.2"
   }
 }
