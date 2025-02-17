@@ -1,0 +1,23 @@
+{
+  "name": "01-gym-managment-system",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcioGabrielMengali/gym-managment-system.git"
+  },
+  "author": "marcio gabriel mengali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcioGabrielMengali/gym-managment-system/issues"
+  },
+  "homepage": "https://github.com/marcioGabrielMengali/gym-managment-system#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}
