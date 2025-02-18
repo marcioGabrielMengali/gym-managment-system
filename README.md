@@ -3,7 +3,7 @@
 ## Description
 
 ```
-A project designed to assist in managing a gym by allowing registration and monitoring of student membership payments.
+A project designed to assist in managing a gym by allowing registration and monitoring of member membership payments.
 ```
 
 ## Requirements
@@ -12,19 +12,19 @@ A project designed to assist in managing a gym by allowing registration and moni
 
 - It should be possible to register a gym.
 
-- It should be possible to register a student.
+- It should be possible to register a member.
 
-- It should be possible to record a payment for a student.
+- It should be possible to record a payment for a member.
 
 - It should be possible to retrieve data from a logged-in gym.
 
-- It should be possible to deactivate a student.
+- It should be possible to deactivate a member.
 
-- It should be possible to list all students.
+- It should be possible to list all members.
 
-- It should be possible to retrieve details of a single student.
+- It should be possible to retrieve details of a single member.
 
-- It should be possible to list all paid and unpaid membership fees of a student.
+- It should be possible to list all paid and unpaid membership fees of a member.
 
 - It should be possible to view all paid membership fees for the month.
 
@@ -36,15 +36,15 @@ A project designed to assist in managing a gym by allowing registration and moni
 
 ### Non-Functional Requirements
 
-- A student can only have one registered email.
+- A member can only have one registered email.
 
 - Each gym can only have one registered CNPJ.
 
-- When registering a student, 12 installments should be created for the membership fee.
+- When registering a member, 12 installments should be created for the membership fee.
 
-- All financial operations and student listings must include active students.
+- All financial operations and member listings must include active members.
 
-- There should be an option to view inactive students as well.
+- There should be an option to view inactive members as well.
 
 ### Technical Requirements
 
@@ -57,3 +57,8 @@ A project designed to assist in managing a gym by allowing registration and moni
 - The project will use fastify framework, zod for validation
 
 - The gym should be authenticated using a JWT token.
+
+## Project
+
+### Database Diagram
+![](imgs/database-diagram.png)
