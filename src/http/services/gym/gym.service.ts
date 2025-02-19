@@ -15,7 +15,7 @@ export class GymService implements IGymService {
   async create(data: IGym): Promise<void> {
     const gym = await this.repository.findByEin(data.ein)
     if(gym){
-        throw new ConflictError('Gym alredy registered!', EErrorMessage.ALREADY_EXISTS)
+        throw new ConflictError('Gym Already Exists!', EErrorMessage.ALREADY_EXISTS)
     }
     await this.repository.create(data);
     return;
