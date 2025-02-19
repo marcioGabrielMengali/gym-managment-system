@@ -20,6 +20,7 @@ model Gym {
   country     String
   state       String
   zipCode     String    @map("zip_code")
+  city        String
   createdAt   DateTime  @default(now()) @map("created_at")
   members     Member[]
   payments    Payment[]

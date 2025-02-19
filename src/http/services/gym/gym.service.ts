@@ -1,0 +1,22 @@
+import { ConflictError } from "@/http/errors/conflict-error";
+import { IGym } from "@/http/interfaces/gym/gym.interface";
+import { IGymService } from "@/http/interfaces/gym/gym.service.interface";
+import { IGymRepository } from "@/repositories/interfaces/gym.repository.interface";
+import { PrismaGymRepository } from "@/repositories/prisma-gym.repository";
+import { inject, injectable } from "tsyringe";
+
+@injectable()
+export class GymService implements IGymService {
+  constructor(
+    @inject(PrismaGymRepository.name)
+    private readonly repository: IGymRepository
+  ) {}
+  async create(data: IGym): Promise<void> {
+    const gym = await this.repository.findByEin(data.ein)
+    if(gym){
+        throw new ConflictError('Gym alredy registered!', 'Already Exists')
+    }
+    await this.repository.create(data);
+    return;
+  }
+}
