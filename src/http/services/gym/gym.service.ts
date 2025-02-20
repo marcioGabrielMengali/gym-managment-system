@@ -4,6 +4,7 @@ import { IGym } from "@/http/interfaces/gym/gym.interface";
 import { IGymService } from "@/http/interfaces/gym/gym.service.interface";
 import { IGymRepository } from "@/repositories/interfaces/gym.repository.interface";
 import { PrismaGymRepository } from "@/repositories/prisma-gym.repository";
+import { hash } from "bcryptjs";
 import { inject, injectable } from "tsyringe";
 
 @injectable()
@@ -17,6 +18,7 @@ export class GymService implements IGymService {
     if(gym){
         throw new ConflictError('Gym Already Exists!', EErrorMessage.ALREADY_EXISTS)
     }
+    data.password = await hash(data.password, 6)
     await this.repository.create(data);
     return;
   }
