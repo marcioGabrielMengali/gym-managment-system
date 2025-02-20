@@ -17,6 +17,7 @@ model Gym {
   id          String    @id() @default(uuid())
   companyName String    @map("company_name")
   ein         String    @unique()
+  password    String
   country     String
   state       String
   zipCode     String    @map("zip_code")
